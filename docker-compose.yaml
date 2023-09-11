@@ -15,16 +15,16 @@ services:
     restart: unless-stopped
 
   jasmin:
-
-    image: jookies/jasmin:latest
-
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
     restart: unless-stopped
 
     container_name: jasmin
 
-    volumes:
+    # volumes:
 
-      - /var/log/jasmin:/var/log/jasmin
+    #   - /var/log/jasmin:/var/log/jasmin
 
     ports:
 
